@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px 0;
+  background: #FF7F50;
+  color: #008B8B;
+  text-align: center;
+  font-family: 'ZCOOL XiaoWei', serif;
+}
+
+h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 60px;
+  text-shadow: 2px 2px #2F4F4F;
+}
+
+p{
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-shadow: 0.5px 0.5px #2F4F4F;
+}
+
+button {
+  border-radius: 4px;
+  padding: 30px 34px;
+  border: solid #CD5C5C;
+  background: #FFE4C4;
+  color: #2F4F4F;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-weight: bold;
+  transition: 1s;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+#newgame {
+  display: none;
+}
+
+.allcards {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,.back,.front {
+  height: 150px;
+  width: 150px;
+}
+
+.back,.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: #008B8B;
+  border: solid #2F4F4F;
+  border-radius: 4px;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: solid #2F4F4F;
+  border-radius: 4px;
+}
+
+.chosen {
+  transform: rotateY(180deg);
+}
+
+.match {
+  background: transparent;
+  border: transparent;
+  pointer-events: none;
+}
+@media screen and (min-width: 1024px){
+    #message {
+      text-align: center;
+      font-size: 8em;
+      color:#FFE4C4;
+      letter-spacing: -7px;
+      font-weight: 700;
+      text-transform: uppercase;
+      animation: blur 1.2s ease-out infinite;
+      text-shadow: 0px 0px 5px #2F4F4F, 0px 0px 7px #008B8B;
+      position: absolute;
+      left: 15%;
+      top: 60%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .message {
+      text-align: center;
+      font-size: 4em;
+      color:#FFE4C4;
+      letter-spacing: -7px;
+      font-weight: 700;
+      text-transform: uppercase;
+      animation: blur1 1.2s ease-out infinite;
+      text-shadow: 0px 0px 5px #2F4F4F, 0px 0px 7px #008B8B;
+      position: relative; 
+    }
+}
+@keyframes blur {
+  from{
+    text-shadow:0px 0px 10px #008B8B,
+      0px 0px 10px #008B8B, 
+      0px 0px 25px #008B8B,
+      0px 0px 25px #008B8B,
+      0px 0px 25px #008B8B,
+      0px 0px 25px #008B8B,
+      0px 0px 25px #008B8B,
+      0px 0px 25px #008B8B,
+      0px 0px 50px #008B8B,
+      0px 0px 50px #008B8B,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+    }
+      0%{left:15%;}
+      33%{left:30%;}
+      66%{left:30%;}
+      100%{left: 15%;}
+}
+
+@keyframes blur1 {
+  from{
+    text-shadow:0px 0px 10px #008B8B,
+      0px 0px 10px #008B8B, 
+      0px 0px 25px #008B8B,
+      0px 0px 25px #008B8B,
+      0px 0px 25px #008B8B,
+      0px 0px 25px #008B8B,
+      0px 0px 25px #008B8B,
+      0px 0px 25px #008B8B,
+      0px 0px 50px #008B8B,
+      0px 0px 50px #008B8B,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+    }
+}
